@@ -1,0 +1,15 @@
+
+module puppet-master 1.0;
+
+require {
+	type lib_t;
+	type httpd_t;
+	class capability sys_resource;
+	class file execute_no_trans;
+}
+
+#============= httpd_t ==============
+allow httpd_t lib_t:file execute_no_trans;
+#!!!! This avc can be allowed using the boolean 'httpd_setrlimit'
+
+allow httpd_t self:capability sys_resource;
