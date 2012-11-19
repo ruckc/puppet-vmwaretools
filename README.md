@@ -1,4 +1,4 @@
-puppet-puppetmaster
-===================
+puppet-vmwaretools
+==================
 
-Puppet Master module for RedHat (requires my httpd module)
+VMWare Tools module for RedHat
